@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 const propTypes = {
-	placeholder:React.PropTypes.string
+	placeholder:React.PropTypes.string,
+	options:React.PropTypes.object.isRequired
 };
 const defaultProps = {
-	placeholder:'请输入信息'
+	placeholder:'请输入信息',
+	options:null
 };
 let tem = [];//用于临时存储点击的节点
 let textStr=[];//存储选择的节点
