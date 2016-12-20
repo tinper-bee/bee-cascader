@@ -43,10 +43,11 @@ import "./node_modules/build/bee-cascader.css"
 
 
 ## API
+
 |参数|说明|类型|默认值|
-|---|----|---|------|
-|placeholder	|input提示信息|	string	|"请输入信息"
-|options	|下拉列表数据	|json|	必填，无默认值
+|:---|:----|:---|:------|
+|placeholder	|input提示信息|	string	|"请输入信息"|
+|options	|下拉列表数据	|json|	必填，无默认值|
 
 options格式如下：
 ```bash
@@ -69,7 +70,7 @@ const options = [
 			    }]
 		  }
 	  ]
-	}, 
+	},
 	{
 	  value: '江苏',
 	  children: [
@@ -98,4 +99,3 @@ $ npm run dev
 ```
 ### TODO
 - test
-

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 const propTypes = {
 	placeholder:React.PropTypes.string,
-	options:React.PropTypes.object.isRequired
+	options:React.PropTypes.any
 };
 const defaultProps = {
 	placeholder:'请输入信息',
@@ -79,7 +79,7 @@ class Cascader extends Component {
 		})
 		if(!this.state.ulArr){
 			this.formatData();
-		}	
+		}
 	}
 	clickHandler(e){
 		e.stopPropagation();
@@ -88,7 +88,7 @@ class Cascader extends Component {
 		// debugger;
 		if(!parentVal)parentVal = this.state.option[i].value;
 		let data = (tem[i])||(this.state.option[i].parent&&this.state.option[i]);
-		if(e.currentTarget.dataset.parent){	
+		if(e.currentTarget.dataset.parent){
 			parentVal = e.currentTarget.innerText;
 			let urlArr = this.state.ulArr[0];
 			data = this.state.option[i];
@@ -113,7 +113,7 @@ class Cascader extends Component {
 				this.clear();
 			}
 		}
-		
+
 	}
 	clear(){
 		tem = [];
