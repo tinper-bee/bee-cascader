@@ -7,9 +7,9 @@ import Button from 'bee-button';
 import Cascader from '../src';
 
 
-const CARET = <i className="uf uf-chevronarrowdown"></i>;
+const CARET = <i className="uf uf-arrow-down"></i>;
 
-const CARETUP = <i className="uf uf-chevronarrowup"></i>;
+const CARETUP = <i className="uf uf-arrow-up"></i>;
 
 
 /**
@@ -68,7 +68,7 @@ const CARETUP = <i className="uf uf-chevronarrowup"></i>;
  		)
  	}
  }
-var DemoArray = [{"example":<Demo1 />,"title":" 基础级联菜单","code":"/**\r\n *\r\n * @title 基础级联菜单\r\n * @description\r\n *\r\n */\r\n\r\n const options = [\r\n \t{\r\n \t  value: '浙江',\r\n \t  children: [\r\n \t\t  {\r\n \t\t    value: '杭州',\r\n \t\t    children: [\r\n \t\t\t    {\r\n \t\t\t      value: '西湖',\r\n \t\t\t      children: [\r\n \t\t\t\t    {\r\n \t\t\t\t      value: '白娘子'\r\n \t\t\t\t    },\r\n \t\t\t\t    {\r\n \t\t\t\t      value: '许仙'\r\n \t\t\t\t    }]\r\n \t\t\t    }]\r\n \t\t  }\r\n \t  ]\r\n \t},\r\n \t{\r\n \t  value: '江苏',\r\n \t  children: [\r\n \t\t  {\r\n \t\t    value: '南京',\r\n \t\t    children: [\r\n \t\t\t    {\r\n \t\t\t      value: '中华门'\r\n \t\t\t    }]\r\n \t\t  }\r\n \t  ]\r\n \t},\r\n \t{\r\n \t  value: '山东'\r\n \t}\r\n ];\r\n class Demo1 extends Component {\r\n \trender(){\r\n \t\treturn(\r\n            <Row>\r\n                <Col md={4}>\r\n                    <div className=\"height-150\">\r\n                     \t<Cascader options = {options} />\r\n                    </div>\r\n                </Col>\r\n            </Row>\r\n \t\t)\r\n \t}\r\n }\r\n","desc":""}]
+var DemoArray = [{"example":<Demo1 />,"title":" 基础级联菜单","code":"/**\n *\n * @title 基础级联菜单\n * @description\n *\n */\n\n const options = [\n \t{\n \t  value: '浙江',\n \t  children: [\n \t\t  {\n \t\t    value: '杭州',\n \t\t    children: [\n \t\t\t    {\n \t\t\t      value: '西湖',\n \t\t\t      children: [\n \t\t\t\t    {\n \t\t\t\t      value: '白娘子'\n \t\t\t\t    },\n \t\t\t\t    {\n \t\t\t\t      value: '许仙'\n \t\t\t\t    }]\n \t\t\t    }]\n \t\t  }\n \t  ]\n \t},\n \t{\n \t  value: '江苏',\n \t  children: [\n \t\t  {\n \t\t    value: '南京',\n \t\t    children: [\n \t\t\t    {\n \t\t\t      value: '中华门'\n \t\t\t    }]\n \t\t  }\n \t  ]\n \t},\n \t{\n \t  value: '山东'\n \t}\n ];\n class Demo1 extends Component {\n \trender(){\n \t\treturn(\n            <Row>\n                <Col md={4}>\n                    <div className=\"height-150\">\n                     \t<Cascader options = {options} />\n                    </div>\n                </Col>\n            </Row>\n \t\t)\n \t}\n }\n","desc":""}]
 
 
 class Demo extends Component {

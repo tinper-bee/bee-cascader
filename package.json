@@ -33,19 +33,20 @@
     "pub": "bee-tools run pub"
   },
   "dependencies": {
+    "bee-button": "^0.2.5",
     "classnames": "^2.2.5",
-    "tinper-bee-core": "latest"
+    "tinper-bee-core": "^0.1.6"
   },
   "devDependencies": {
-    "bee-button": "^0.1.10",
-    "bee-layout": "^0.1.6",
-    "bee-panel": "0.0.6",
+    "bee-button": "latest",
+    "bee-layout": "latest",
+    "bee-panel": "latest",
     "chai": "^3.5.0",
     "console-polyfill": "~0.2.1",
     "enzyme": "^2.4.1",
     "es5-shim": "~4.1.10",
-    "react": "~0.14.0",
+    "react": "15.3.2",
     "react-addons-test-utils": "15.3.2",
-    "react-dom": "~0.14.0"
+    "react-dom": "15.3.2"
   }
 }

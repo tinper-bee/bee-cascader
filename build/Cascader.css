@@ -1,38 +1,5 @@
-@charset "UTF-8";
-/*  IMAGES  */
-/* 默认颜色 */
-/* 客户化 */
-/* 波纹效果 */
-/*贝塞尔曲线动画 */
-/* 阴影 */
-/* ==========  文本字体  ========== */
-/* 控件 */
-/* 不同背景下对应的文字颜色 */
-/* UButton */
-/* UText */
+/* FormGroup */
 /*  Navlayout  */
-/* gridlayout */
-/* menu */
-/* Alert */
-/* Checkbox */
-/*  Radio  */
-/* Switch  */
-/* loading */
-/* datetimepicker */
-/* message */
-/* DATA TABLE */
-/* tooltip*/
-/* 进度条 */
-/* ==========  Content Tabs  ========== */
-/* CARD */
-/* Card dimensions */
-/* Cover image */
-/* ==========  Card  ========== */
-/* ============ Forms ============*/
-/* BADGE */
-/* Typography */
-/* Shadows */
-/* Animations */
 .cascader-container {
   position: relative; }
 
@@ -61,7 +28,6 @@
 
 .cascader-content {
   position: absolute;
-  top: 15px;
   left: 0px;
   display: inline-flex;
   z-index: 2; }
@@ -73,7 +39,8 @@
     min-width: 100px;
     vertical-align: middle;
     border-radius: 4px;
-    padding: 0px; }
+    padding: 0px;
+    margin-top: 0; }
   .cascader-content ul:first-child {
     border-left: 1px solid #ccc; }
   .cascader-content li {

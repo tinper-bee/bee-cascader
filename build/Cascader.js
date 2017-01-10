@@ -19,10 +19,12 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
 
 var propTypes = {
-	placeholder: _react2["default"].PropTypes.string
+	placeholder: _react2["default"].PropTypes.string,
+	options: _react2["default"].PropTypes.any
 };
 var defaultProps = {
-	placeholder: '请输入信息'
+	placeholder: '请输入信息',
+	options: null
 };
 var tem = []; //用于临时存储点击的节点
 var textStr = []; //存储选择的节点

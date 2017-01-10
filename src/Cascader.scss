@@ -32,7 +32,6 @@
 }
 .cascader-content{
 	position: absolute;
-	top: 15px;
 	left: 0px;
 	display: inline-flex;
 	z-index: 2;
@@ -45,6 +44,7 @@
     	vertical-align: middle;
     	border-radius: 4px;
     	padding:0px;
+    	margin-top: 0;
 
 	}
 	ul:first-child{
