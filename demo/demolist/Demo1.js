@@ -5,6 +5,10 @@
  *
  */
 
+import React, { Component } from 'react';
+import {Row, Col } from 'bee-layout';
+import Cascader from '../../src';
+
  const options = [
  	{
  	  value: '浙江',
@@ -41,7 +45,7 @@
  	  value: '山东'
  	}
  ];
- class Demo1 extends Component {
+ export default class Demo1 extends Component {
  	render(){
  		return(
             <Row>
