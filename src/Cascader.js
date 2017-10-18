@@ -1,7 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 const propTypes = {
-	placeholder:React.PropTypes.string,
-	options:React.PropTypes.any
+	placeholder:PropTypes.string,
+	options:PropTypes.any
 };
 const defaultProps = {
 	placeholder:'请输入信息',
@@ -85,7 +87,6 @@ class Cascader extends Component {
 		e.stopPropagation();
 		e.preventDefault();
 		let i = e.currentTarget.dataset.id;
-		// debugger;
 		if(!parentVal)parentVal = this.state.option[i].value;
 		let data = (tem[i])||(this.state.option[i].parent&&this.state.option[i]);
 		if(e.currentTarget.dataset.parent){
