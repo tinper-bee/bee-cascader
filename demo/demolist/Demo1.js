@@ -45,7 +45,7 @@ import Cascader from '../../src';
  	  value: '山东'
  	}
  ];
- export default class Demo1 extends Component {
+ class Demo1 extends Component {
  	render(){
  		return(
             <Row>
@@ -58,3 +58,4 @@ import Cascader from '../../src';
  		)
  	}
  }
+export default Demo1;
