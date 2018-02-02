@@ -6324,6 +6324,10 @@
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
+	var _classnames = __webpack_require__(3);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -6486,7 +6490,7 @@
 			var va = this.state.textStr.join('/');
 			return _react2['default'].createElement(
 				'div',
-				{ className: 'cascader-container' },
+				{ className: (0, _classnames2['default'])("cascader-container", this.props.className) },
 				_react2['default'].createElement(
 					'div',
 					{ className: 'cascader-header' },

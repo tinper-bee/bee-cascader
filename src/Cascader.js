@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 const propTypes = {
 	placeholder:PropTypes.string,
@@ -126,7 +127,7 @@ class Cascader extends Component {
 	render(){
 		let va = this.state.textStr.join('/');
 		return(
-			<div className="cascader-container">
+			<div className={classnames("cascader-container",this.props.className)}>
 				<div className="cascader-header">
 					<input onFocus = {this.focusHandler} type="text" placeholder = {this.props.placeholder} value={va}  />
 				</div>
