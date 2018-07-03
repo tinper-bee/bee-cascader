@@ -46,12 +46,18 @@ import Cascader from '../../src';
  	}
  ];
  class Demo1 extends Component {
+
+
+	onClickHandler=(data)=>{
+		console.log("data: ",data);
+	}
+
  	render(){
  		return(
             <Row>
                 <Col md={4}>
                     <div className="height-150">
-                     	<Cascader options = {options} />
+                     	<Cascader options = {options} onClick={this.onClickHandler}/>
                     </div>
                 </Col>
             </Row>

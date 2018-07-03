@@ -4,7 +4,8 @@ import classnames from 'classnames';
 
 const propTypes = {
 	placeholder:PropTypes.string,
-	options:PropTypes.any
+	options:PropTypes.any,
+	onClick:PropTypes.func
 };
 const defaultProps = {
 	placeholder:'请输入信息',
@@ -115,7 +116,9 @@ class Cascader extends Component {
 				this.clear();
 			}
 		}
-
+		if(this.props.onClick){
+			this.props.onClick(textStr);
+		}
 	}
 	clear(){
 		tem = [];
