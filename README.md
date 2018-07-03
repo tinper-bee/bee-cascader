@@ -48,6 +48,8 @@ import "./node_modules/build/bee-cascader.css"
 |:---|:----|:---|:------|
 |placeholder	|input提示信息|	string	|"请输入信息"|
 |options	|下拉列表数据	|json|	必填，无默认值|
+|onClick	|选中节点的钩子函数，返回array选中的节点| function |	必填，无默认值|
+
 
 options格式如下：
 ```bash
@@ -99,3 +101,5 @@ $ npm run dev
 ```
 ### TODO
 - test
+
+

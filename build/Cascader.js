@@ -12,6 +12,10 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
@@ -24,7 +28,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var propTypes = {
 	placeholder: _propTypes2["default"].string,
-	options: _propTypes2["default"].any
+	options: _propTypes2["default"].any,
+	onClick: _propTypes2["default"].func
 };
 var defaultProps = {
 	placeholder: '请输入信息',
@@ -160,6 +165,9 @@ var Cascader = function (_Component) {
 				this.clear();
 			}
 		}
+		if (this.props.onClick) {
+			this.props.onClick(textStr);
+		}
 	};
 
 	Cascader.prototype.clear = function clear() {
@@ -174,7 +182,7 @@ var Cascader = function (_Component) {
 		var va = this.state.textStr.join('/');
 		return _react2["default"].createElement(
 			'div',
-			{ className: 'cascader-container' },
+			{ className: (0, _classnames2["default"])("cascader-container", this.props.className) },
 			_react2["default"].createElement(
 				'div',
 				{ className: 'cascader-header' },
