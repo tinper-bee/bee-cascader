@@ -55,7 +55,7 @@
 		cursor: pointer;
 		margin-bottom: 5px;
 		&:hover{
-			background-color: #e7f4fd;
+			background-color: $hover-bg-color-base;
 		}
 	}
 	i.uf{
