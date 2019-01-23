@@ -1,5 +1,10 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/tinper-bee/bee-cascader/compare/v1.0.4...v2.0.0) (2019-01-23)
+
+
+
 <a name="1.0.4"></a>
-## 1.0.4 (2018-07-03)
+## [1.0.4](https://github.com/tinper-bee/bee-cascader/compare/fcfd2e7...v1.0.4) (2018-07-03)
 
 
 ### Bug Fixes
