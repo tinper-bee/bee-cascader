@@ -1,9 +1,10 @@
-<a name="2.0.1"></a>
-## [2.0.1](https://github.com/tinper-bee/bee-cascader/compare/v2.0.0...v2.0.1) (2019-03-04)
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/tinper-bee/bee-cascader/compare/v2.0.1...v2.0.2) (2019-03-04)
 
 
 ### Features
 
+* **bee-cascader:** 动态改变options ([4cdcc1f](https://github.com/tinper-bee/bee-cascader/commit/4cdcc1f))
 * **bee-cascader:** 动态改变options ([ec15d2b](https://github.com/tinper-bee/bee-cascader/commit/ec15d2b)), closes [#145](https://github.com/tinper-bee/bee-cascader/issues/145)
 
 
