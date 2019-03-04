@@ -1,6 +1,6 @@
 {
  "name": "bee-cascader",
- "version": "2.0.1",
+ "version": "2.0.2",
  "description": "Cascader ui component for react",
  "keywords": [
   "react",
@@ -13,7 +13,7 @@
  "engines": {
   "node": ">=4.0.0"
  },
- "homepage": "https://github.com/tinper-beebee-cascader.git",
+ "homepage": "https://github.com/tinper-bee/bee-cascader.git",
  "author": "supernever",
  "repository": "http://github.com/tinper-bee/bee-cascader",
  "bugs": "https://github.com/tinper-beebee-cascader.git/issues",
