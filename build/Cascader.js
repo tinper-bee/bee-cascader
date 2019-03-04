@@ -178,6 +178,19 @@ var Cascader = function (_Component) {
 		});
 	};
 
+	Cascader.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+		if ('options' in nextProps) {
+			var _options = nextProps.options;
+			for (var i = _options.length - 1; i >= 0; i--) {
+				_options[i]['parent'] = true;
+			}
+			this.setState({
+				option: _options,
+				textStr: []
+			});
+		}
+	};
+
 	Cascader.prototype.render = function render() {
 		var va = this.state.textStr.join('/');
 		return _react2["default"].createElement(

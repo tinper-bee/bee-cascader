@@ -127,6 +127,18 @@ class Cascader extends Component {
 			ulArr:null
 		})
 	}
+	componentWillReceiveProps(nextProps){
+		if('options' in nextProps){
+			let options = nextProps.options;
+			for (let i = options.length - 1; i >= 0; i--) {
+				options[i]['parent'] = true
+			}
+			this.setState({
+				option:options,
+				textStr:[]
+			})
+		}
+	}
 	render(){
 		let va = this.state.textStr.join('/');
 		return(
