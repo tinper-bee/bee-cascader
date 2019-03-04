@@ -188,6 +188,9 @@ var Cascader = function (_Component) {
 				option: _options,
 				textStr: []
 			});
+			if (this.props.onClick) {
+				this.props.onClick([]);
+			}
 		}
 	};
 

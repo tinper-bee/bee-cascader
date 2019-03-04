@@ -46,18 +46,64 @@ import Cascader from '../../src';
  	}
  ];
  class Demo1 extends Component {
-
+	constructor(props){
+		super(props);
+		this.state={
+			options:options
+		}
+	}
 
 	onClickHandler=(data)=>{
 		console.log("data: ",data);
 	}
 
+	click=()=>{
+		this.setState({
+			options:[
+				{
+					value: '浙江1',
+					children: [
+						{
+							value: '杭州',
+							children: [
+								{
+									value: '西湖',
+									children: [
+									{
+										value: '白娘子'
+									},
+									{
+										value: '许仙'
+									}]
+								}]
+						}
+					]
+				},
+				{
+					value: '江苏1',
+					children: [
+						{
+							value: '南京',
+							children: [
+								{
+									value: '中华门'
+								}]
+						}
+					]
+				},
+				{
+					value: '山东1'
+				}
+			]
+		})
+	}
  	render(){
  		return(
             <Row>
                 <Col md={4}>
+									<button onClick={this.click}>点击</button>
                     <div className="height-150">
-                     	<Cascader options = {options} onClick={this.onClickHandler}/>
+                     	<Cascader options = {this.state.options} onClick={this.onClickHandler}/>
                     </div>
                 </Col>
             </Row>

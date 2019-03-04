@@ -137,6 +137,9 @@ class Cascader extends Component {
 				option:options,
 				textStr:[]
 			})
+			if(this.props.onClick){
+				this.props.onClick([]);
+			}
 		}
 	}
 	render(){

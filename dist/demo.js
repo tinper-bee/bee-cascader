@@ -76,7 +76,7 @@
 	
 	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(84);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基础级联菜单", "code": "/**\n *\n * @title 基础级联菜单\n * @description\n *\n */\n\nimport React, { Component } from 'react';\nimport { Cascader, Row, Col  } from 'tinper-bee';\n\n const options = [\n \t{\n \t  value: '浙江',\n \t  children: [\n \t\t  {\n \t\t    value: '杭州',\n \t\t    children: [\n \t\t\t    {\n \t\t\t      value: '西湖',\n \t\t\t      children: [\n \t\t\t\t    {\n \t\t\t\t      value: '白娘子'\n \t\t\t\t    },\n \t\t\t\t    {\n \t\t\t\t      value: '许仙'\n \t\t\t\t    }]\n \t\t\t    }]\n \t\t  }\n \t  ]\n \t},\n \t{\n \t  value: '江苏',\n \t  children: [\n \t\t  {\n \t\t    value: '南京',\n \t\t    children: [\n \t\t\t    {\n \t\t\t      value: '中华门'\n \t\t\t    }]\n \t\t  }\n \t  ]\n \t},\n \t{\n \t  value: '山东'\n \t}\n ];\n class Demo1 extends Component {\n\n\n\tonClickHandler=(data)=>{\n\t\tconsole.log(\"data: \",data);\n\t}\n\n \trender(){\n \t\treturn(\n            <Row>\n                <Col md={4}>\n                    <div className=\"height-150\">\n                     \t<Cascader options = {options} onClick={this.onClickHandler}/>\n                    </div>\n                </Col>\n            </Row>\n \t\t)\n \t}\n }\n", "desc": "" }];
+	var Demo1 = __webpack_require__(84);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基础级联菜单", "code": "/**\n *\n * @title 基础级联菜单\n * @description\n *\n */\n\nimport React, { Component } from 'react';\nimport { Cascader, Row, Col  } from 'tinper-bee';\n\n const options = [\n \t{\n \t  value: '浙江',\n \t  children: [\n \t\t  {\n \t\t    value: '杭州',\n \t\t    children: [\n \t\t\t    {\n \t\t\t      value: '西湖',\n \t\t\t      children: [\n \t\t\t\t    {\n \t\t\t\t      value: '白娘子'\n \t\t\t\t    },\n \t\t\t\t    {\n \t\t\t\t      value: '许仙'\n \t\t\t\t    }]\n \t\t\t    }]\n \t\t  }\n \t  ]\n \t},\n \t{\n \t  value: '江苏',\n \t  children: [\n \t\t  {\n \t\t    value: '南京',\n \t\t    children: [\n \t\t\t    {\n \t\t\t      value: '中华门'\n \t\t\t    }]\n \t\t  }\n \t  ]\n \t},\n \t{\n \t  value: '山东'\n \t}\n ];\n class Demo1 extends Component {\n\tconstructor(props){\n\t\tsuper(props);\n\t\tthis.state={\n\t\t\toptions:options\n\t\t}\n\t}\n\n\tonClickHandler=(data)=>{\n\t\tconsole.log(\"data: \",data);\n\t}\n\n\tclick=()=>{\n\t\tthis.setState({\n\t\t\toptions:[\n\t\t\t\t{\n\t\t\t\t\tvalue: '浙江1',\n\t\t\t\t\tchildren: [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tvalue: '杭州',\n\t\t\t\t\t\t\tchildren: [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tvalue: '西湖',\n\t\t\t\t\t\t\t\t\tchildren: [\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\tvalue: '白娘子'\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\tvalue: '许仙'\n\t\t\t\t\t\t\t\t\t}]\n\t\t\t\t\t\t\t\t}]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\tvalue: '江苏1',\n\t\t\t\t\tchildren: [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tvalue: '南京',\n\t\t\t\t\t\t\tchildren: [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\tvalue: '中华门'\n\t\t\t\t\t\t\t\t}]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\tvalue: '山东1'\n\t\t\t\t}\n\t\t\t]\n\t\t})\n\t}\n \trender(){\n \t\treturn(\n            <Row>\n                <Col md={4}>\n\t\t\t\t\t\t\t\t\t<button onClick={this.click}>点击</button>\n                    <div className=\"height-150\">\n                     \t<Cascader options = {this.state.options} onClick={this.onClickHandler}/>\n                    </div>\n                </Col>\n            </Row>\n \t\t)\n \t}\n }\n", "desc": "" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -8059,18 +8059,48 @@
 	var Demo1 = function (_Component) {
 	  _inherits(Demo1, _Component);
 	
-	  function Demo1() {
-	    var _temp, _this, _ret;
-	
+	  function Demo1(props) {
 	    _classCallCheck(this, Demo1);
 	
-	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	      args[_key] = arguments[_key];
-	    }
+	    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 	
-	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.onClickHandler = function (data) {
+	    _this.onClickHandler = function (data) {
 	      console.log("data: ", data);
-	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	    };
+	
+	    _this.click = function () {
+	      _this.setState({
+	        options: [{
+	          value: '浙江1',
+	          children: [{
+	            value: '杭州',
+	            children: [{
+	              value: '西湖',
+	              children: [{
+	                value: '白娘子'
+	              }, {
+	                value: '许仙'
+	              }]
+	            }]
+	          }]
+	        }, {
+	          value: '江苏1',
+	          children: [{
+	            value: '南京',
+	            children: [{
+	              value: '中华门'
+	            }]
+	          }]
+	        }, {
+	          value: '山东1'
+	        }]
+	      });
+	    };
+	
+	    _this.state = {
+	      options: options
+	    };
+	    return _this;
 	  }
 	
 	  Demo1.prototype.render = function render() {
@@ -8081,9 +8111,14 @@
 	        _beeLayout.Col,
 	        { md: 4 },
 	        _react2['default'].createElement(
+	          'button',
+	          { onClick: this.click },
+	          '\u70B9\u51FB'
+	        ),
+	        _react2['default'].createElement(
 	          'div',
 	          { className: 'height-150' },
-	          _react2['default'].createElement(_src2['default'], { options: options, onClick: this.onClickHandler })
+	          _react2['default'].createElement(_src2['default'], { options: this.state.options, onClick: this.onClickHandler })
 	        )
 	      )
 	    );
@@ -8308,6 +8343,9 @@
 					option: _options,
 					textStr: []
 				});
+				if (this.props.onClick) {
+					this.props.onClick([]);
+				}
 			}
 		};
 	

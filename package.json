@@ -37,7 +37,7 @@
  },
  "dependencies": {
   "classnames": "^2.2.5",
-  "tinper-bee-core": "latest"
+  "tinper-bee-core": "^2.0.13"
  },
  "peerDependencies": {
   "react": "^15.3.0 || ^16.0",
