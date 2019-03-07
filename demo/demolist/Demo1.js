@@ -8,6 +8,7 @@
 import React, { Component } from 'react';
 import {Row, Col } from 'bee-layout';
 import Cascader from '../../src';
+import Button from "bee-button";
 
  const options = [
  	{
@@ -101,7 +102,7 @@ import Cascader from '../../src';
  		return(
             <Row>
                 <Col md={4}>
-									<button onClick={this.click}>点击</button>
+									<Button colors="primary" onClick={this.click} style={{marginBottom:8+'px'}}>点击</Button>
                     <div className="height-150">
                      	<Cascader options = {this.state.options} onClick={this.onClickHandler}/>
                     </div>
