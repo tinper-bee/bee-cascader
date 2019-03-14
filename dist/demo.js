@@ -76,7 +76,7 @@
 	
 	var CARETUP = _react2['default'].createElement('i', { className: 'uf uf-arrow-up' });
 	
-	var Demo1 = __webpack_require__(84);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基础级联菜单", "code": "/**\r\n *\r\n * @title 基础级联菜单\r\n * @description\r\n *\r\n */\r\n\r\nimport React, { Component } from 'react';\r\n\nimport { Cascader, Button, Row, Col  } from 'tinper-bee';\r\n\n\r\n const options = [\r\n \t{\r\n \t  value: '浙江',\r\n \t  children: [\r\n \t\t  {\r\n \t\t    value: '杭州',\r\n \t\t    children: [\r\n \t\t\t    {\r\n \t\t\t      value: '西湖',\r\n \t\t\t      children: [\r\n \t\t\t\t    {\r\n \t\t\t\t      value: '白娘子'\r\n \t\t\t\t    },\r\n \t\t\t\t    {\r\n \t\t\t\t      value: '许仙'\r\n \t\t\t\t    }]\r\n \t\t\t    }]\r\n \t\t  }\r\n \t  ]\r\n \t},\r\n \t{\r\n \t  value: '江苏',\r\n \t  children: [\r\n \t\t  {\r\n \t\t    value: '南京',\r\n \t\t    children: [\r\n \t\t\t    {\r\n \t\t\t      value: '中华门'\r\n \t\t\t    }]\r\n \t\t  }\r\n \t  ]\r\n \t},\r\n \t{\r\n \t  value: '山东'\r\n \t}\r\n ];\r\n class Demo1 extends Component {\r\n\tconstructor(props){\r\n\t\tsuper(props);\r\n\t\tthis.state={\r\n\t\t\toptions:options\r\n\t\t}\r\n\t}\r\n\r\n\tonClickHandler=(data)=>{\r\n\t\tconsole.log(\"data: \",data);\r\n\t}\r\n\r\n\tclick=()=>{\r\n\t\tthis.setState({\r\n\t\t\toptions:[\r\n\t\t\t\t{\r\n\t\t\t\t\tvalue: '浙江1',\r\n\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tvalue: '杭州',\r\n\t\t\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tvalue: '西湖',\r\n\t\t\t\t\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tvalue: '白娘子'\r\n\t\t\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tvalue: '许仙'\r\n\t\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\tvalue: '江苏1',\r\n\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tvalue: '南京',\r\n\t\t\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tvalue: '中华门'\r\n\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\tvalue: '山东1'\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t})\r\n\t}\r\n \trender(){\r\n \t\treturn(\r\n            <Row>\r\n                <Col md={4}>\r\n\t\t\t\t\t\t\t\t\t<Button colors=\"primary\" onClick={this.click} style={{marginBottom:8+'px'}}>清空</Button>\r\n                    <div className=\"height-150\">\r\n                     \t<Cascader options = {this.state.options} onClick={this.onClickHandler}/>\r\n                    </div>\r\n                </Col>\r\n            </Row>\r\n \t\t)\r\n \t}\r\n }\r\n", "desc": "" }];
+	var Demo1 = __webpack_require__(84);var DemoArray = [{ "example": _react2['default'].createElement(Demo1, null), "title": " 基础级联菜单", "code": "/**\r\n *\r\n * @title 基础级联菜单\r\n * @description\r\n *\r\n */\r\n\r\nimport React, { Component } from 'react';\r\n\nimport { Cascader, Button, Row, Col  } from 'tinper-bee';\r\n\n\r\n const options = [\r\n \t{\r\n \t  value: '浙江',\r\n \t  children: [\r\n \t\t  {\r\n \t\t    value: '杭州',\r\n \t\t    children: [\r\n \t\t\t    {\r\n \t\t\t      value: '西湖',\r\n \t\t\t      children: [\r\n \t\t\t\t    {\r\n \t\t\t\t      value: '白娘子'\r\n \t\t\t\t    },\r\n \t\t\t\t    {\r\n \t\t\t\t      value: '许仙'\r\n \t\t\t\t    }]\r\n \t\t\t    }]\r\n \t\t  }\r\n \t  ]\r\n \t},\r\n \t{\r\n \t  value: '江苏',\r\n \t  children: [\r\n \t\t  {\r\n \t\t    value: '南京',\r\n \t\t    children: [\r\n \t\t\t    {\r\n \t\t\t      value: '中华门'\r\n \t\t\t    }]\r\n \t\t  }\r\n \t  ]\r\n \t},\r\n \t{\r\n \t  value: '山东'\r\n \t}\r\n ];\r\n class Demo1 extends Component {\r\n\tconstructor(props){\r\n\t\tsuper(props);\r\n\t\tthis.state={\r\n\t\t\toptions:options\r\n\t\t}\r\n\t}\r\n\r\n\tonClickHandler=(data)=>{\r\n\t\t// console.log(\"data: \",data);\r\n\t}\r\n\r\n\tclick=()=>{\r\n\t\tthis.setState({\r\n\t\t\toptions:[\r\n\t\t\t\t{\r\n\t\t\t\t\tvalue: '浙江1',\r\n\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tvalue: '杭州',\r\n\t\t\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tvalue: '西湖',\r\n\t\t\t\t\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tvalue: '白娘子'\r\n\t\t\t\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tvalue: '许仙'\r\n\t\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\tvalue: '江苏1',\r\n\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tvalue: '南京',\r\n\t\t\t\t\t\t\tchildren: [\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tvalue: '中华门'\r\n\t\t\t\t\t\t\t\t}]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t},\r\n\t\t\t\t{\r\n\t\t\t\t\tvalue: '山东1'\r\n\t\t\t\t}\r\n\t\t\t]\r\n\t\t})\r\n\t}\r\n \trender(){\r\n \t\treturn(\r\n            <Row>\r\n                <Col md={4}>\r\n\t\t\t\t\t\t\t\t\t<Button colors=\"primary\" onClick={this.click} style={{marginBottom:8+'px'}}>切换数据源</Button>\r\n                    <div className=\"height-150\">\r\n                     \t<Cascader options = {this.state.options} onClick={this.onClickHandler}/>\r\n                    </div>\r\n                </Col>\r\n            </Row>\r\n \t\t)\r\n \t}\r\n }\r\n", "desc": "" }];
 	
 	var Demo = function (_Component) {
 	    _inherits(Demo, _Component);
@@ -8069,7 +8069,7 @@
 	    var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 	
 	    _this.onClickHandler = function (data) {
-	      console.log("data: ", data);
+	      // console.log("data: ",data);
 	    };
 	
 	    _this.click = function () {
@@ -8117,7 +8117,7 @@
 	        _react2['default'].createElement(
 	          _beeButton2['default'],
 	          { colors: 'primary', onClick: this.click, style: { marginBottom: 8 + 'px' } },
-	          '\u6E05\u7A7A'
+	          '\u5207\u6362\u6570\u636E\u6E90'
 	        ),
 	        _react2['default'].createElement(
 	          'div',
@@ -8171,6 +8171,18 @@
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
+	var _beeFormControl = __webpack_require__(87);
+	
+	var _beeFormControl2 = _interopRequireDefault(_beeFormControl);
+	
+	var _beeInputGroup = __webpack_require__(91);
+	
+	var _beeInputGroup2 = _interopRequireDefault(_beeInputGroup);
+	
+	var _beeIcon = __webpack_require__(89);
+	
+	var _beeIcon2 = _interopRequireDefault(_beeIcon);
+	
 	var _classnames = __webpack_require__(3);
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
@@ -8208,6 +8220,18 @@
 	
 			var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 	
+			_this.onMouseLeave = function (e) {
+				_this.setState({
+					showClose: false
+				});
+			};
+	
+			_this.onMouseEnter = function (e) {
+				_this.setState({
+					showClose: true
+				});
+			};
+	
 			var options = _this.props.options;
 			for (var i = options.length - 1; i >= 0; i--) {
 				options[i]['parent'] = true;
@@ -8216,13 +8240,15 @@
 				option: options,
 				origin: null, //用于存储点击的第一级节点
 				ulArr: null,
-				textStr: []
+				textStr: [],
+				showClose: false //是否显示清空按钮
 			};
 			_this.formatData = _this.formatData.bind(_this);
 			_this.clickHandler = _this.clickHandler.bind(_this);
 			_this.focusHandler = _this.focusHandler.bind(_this);
 			_this.clear = _this.clear.bind(_this);
 			_this.uniqueID = _this.uniqueID.bind(_this);
+			_this.resetValue = _this.resetValue.bind(_this);
 			return _this;
 		}
 	
@@ -8243,19 +8269,31 @@
 				if ('children' in option[i]) {
 					liArr.push(_react2['default'].createElement(
 						'li',
-						{ 'data-parent': option[i]['parent'], onClick: this.clickHandler, key: this.uniqueID(), 'data-id': i },
-						option[i]['value'],
+						{ 'data-parent': option[i]['parent'],
+							onClick: this.clickHandler,
+							key: this.uniqueID(),
+							'data-id': i
+						},
 						_react2['default'].createElement(
-							'i',
-							{ className: 'icon uf' },
-							'\uE611'
-						)
+							'span',
+							{ className: 'cascader-list-item' },
+							option[i]['value']
+						),
+						_react2['default'].createElement('i', { className: 'uf uf-arrow-right' })
 					));
 				} else {
 					liArr.push(_react2['default'].createElement(
 						'li',
-						{ 'data-parent': option[i]['parent'], onClick: this.clickHandler, key: this.uniqueID(), 'data-id': i },
-						option[i]['value']
+						{ 'data-parent': option[i]['parent'],
+							onClick: this.clickHandler,
+							key: this.uniqueID(),
+							'data-id': i
+						},
+						_react2['default'].createElement(
+							'span',
+							null,
+							option[i]['value']
+						)
 					));
 				}
 			}
@@ -8296,6 +8334,7 @@
 		Cascader.prototype.clickHandler = function clickHandler(e) {
 			e.stopPropagation();
 			e.preventDefault();
+			// e.currentTarget.classList.add("active");
 			var i = e.currentTarget.dataset.id;
 			if (!parentVal) parentVal = this.state.option[i].value;
 			var data = tem[i] || this.state.option[i].parent && this.state.option[i];
@@ -8332,8 +8371,20 @@
 		Cascader.prototype.clear = function clear() {
 			tem = [];
 			listArr = [];
+			restoreClick = undefined;
 			this.setState({
 				ulArr: null
+			});
+		};
+		/**
+	  * 清空已选的值
+	  */
+	
+	
+		Cascader.prototype.resetValue = function resetValue() {
+			restoreClick = undefined;
+			this.setState({
+				textStr: []
 			});
 		};
 	
@@ -8354,19 +8405,53 @@
 		};
 	
 		Cascader.prototype.render = function render() {
+			var _this2 = this;
+	
 			var va = this.state.textStr.join('/');
+			var _state = this.state,
+			    ulArr = _state.ulArr,
+			    showClose = _state.showClose;
+	
+			var iconClass = !ulArr ? "uf-treearrow-down" : "uf-gridcaretarrowup";
 			return _react2['default'].createElement(
 				'div',
 				{ className: (0, _classnames2['default'])("cascader-container", this.props.className) },
 				_react2['default'].createElement(
 					'div',
 					{ className: 'cascader-header' },
-					_react2['default'].createElement('input', { onFocus: this.focusHandler, type: 'text', placeholder: this.props.placeholder, value: va })
+					_react2['default'].createElement(
+						_beeInputGroup2['default'],
+						{ simple: true, className: 'cascader-input-group',
+							onMouseEnter: this.onMouseEnter,
+							onMouseLeave: this.onMouseLeave
+						},
+						_react2['default'].createElement(_beeFormControl2['default'], {
+							placeholder: this.props.placeholder,
+							value: va,
+							onFocus: function onFocus(v, e) {
+								_this2.focusHandler(e);
+							},
+							type: 'text'
+						}),
+						va && showClose ? _react2['default'].createElement(
+							_beeInputGroup2['default'].Button,
+							{ shape: 'border',
+								onClick: this.resetValue },
+							_react2['default'].createElement('i', { className: 'uf uf-close-c' })
+						) : _react2['default'].createElement(
+							_beeInputGroup2['default'].Button,
+							{ shape: 'border',
+								onClick: function onClick(e) {
+									props.keyboardInput ? _this2.iconClick(e) : '';
+								} },
+							_react2['default'].createElement('i', { className: 'uf ' + iconClass })
+						)
+					)
 				),
 				_react2['default'].createElement(
 					'div',
 					{ className: 'cascader-content' },
-					this.state.ulArr
+					ulArr
 				)
 			);
 		};
@@ -8378,6 +8463,639 @@
 	Cascader.propTypes = propTypes;
 	Cascader.defaultProps = defaultProps;
 	exports['default'] = Cascader;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _FormControl = __webpack_require__(88);
+	
+	var _FormControl2 = _interopRequireDefault(_FormControl);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	exports["default"] = _FormControl2["default"];
+	module.exports = exports['default'];
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(3);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _beeIcon = __webpack_require__(89);
+	
+	var _beeIcon2 = _interopRequireDefault(_beeIcon);
+	
+	var _propTypes = __webpack_require__(5);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	
+	var propTypes = {
+	    componentClass: _propTypes2["default"].oneOfType([_propTypes2["default"].element, _propTypes2["default"].string]),
+	    type: _propTypes2["default"].string,
+	    size: _propTypes2["default"].oneOf(['sm', 'md', 'lg']),
+	    onSearch: _propTypes2["default"].func,
+	    onChange: _propTypes2["default"].func,
+	    onBlur: _propTypes2["default"].func,
+	    showClose: _propTypes2["default"].bool,
+	    focusSelect: _propTypes2["default"].bool
+	};
+	
+	var defaultProps = {
+	    componentClass: 'input',
+	    clsPrefix: 'u-form-control',
+	    type: 'text',
+	    size: 'md'
+	};
+	
+	var FormControl = function (_React$Component) {
+	    _inherits(FormControl, _React$Component);
+	
+	    function FormControl(props) {
+	        _classCallCheck(this, FormControl);
+	
+	        var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
+	
+	        _this.handleSearchChange = function (e) {
+	            var onChange = _this.props.onChange;
+	
+	            var value = _this.input.value;
+	            _this.setState({
+	                value: value,
+	                showSearch: value == null || value === ""
+	            });
+	            if (onChange) {
+	                onChange(value, e);
+	            }
+	        };
+	
+	        _this.handleChange = function (e) {
+	            var onChange = _this.props.onChange;
+	
+	            var value = _this.input.value;
+	            _this.setState({
+	                showClose: true
+	            });
+	            if (onChange) {
+	                onChange(value, e);
+	            }
+	        };
+	
+	        _this.clearValue = function () {
+	            var onChange = _this.props.onChange;
+	
+	            _this.setState({
+	                showSearch: true,
+	                value: "",
+	                showClose: false
+	            });
+	            if (onChange) {
+	                onChange("");
+	            }
+	            _this.input.focus();
+	        };
+	
+	        _this.handleKeyDown = function (e) {
+	            var _this$props = _this.props,
+	                onSearch = _this$props.onSearch,
+	                type = _this$props.type;
+	
+	            if (e.keyCode === 13 && type === "search") {
+	                if (onSearch) {
+	                    onSearch(_this.input.value);
+	                }
+	            }
+	        };
+	
+	        _this.handleSearch = function (e) {
+	            var onSearch = _this.props.onSearch;
+	
+	            if (onSearch) onSearch(_this.input.value);
+	        };
+	
+	        _this.handleBlur = function (e) {
+	            var value = _this.state.value;
+	            var onBlur = _this.props.onBlur;
+	
+	
+	            if (onBlur) {
+	                onBlur(value, e);
+	            }
+	        };
+	
+	        _this.handleFocus = function (e) {
+	            var value = _this.state.value;
+	            var onFocus = _this.props.onFocus;
+	
+	            if (_this.props.focusSelect) {
+	                _this.input.select();
+	            }
+	            if (onFocus) {
+	                onFocus(value, e);
+	            }
+	        };
+	
+	        _this.renderInput = function () {
+	            var _this$props2 = _this.props,
+	                Component = _this$props2.componentClass,
+	                type = _this$props2.type,
+	                className = _this$props2.className,
+	                size = _this$props2.size,
+	                clsPrefix = _this$props2.clsPrefix,
+	                value = _this$props2.value,
+	                onChange = _this$props2.onChange,
+	                onSearch = _this$props2.onSearch,
+	                onBlur = _this$props2.onBlur,
+	                showClose = _this$props2.showClose,
+	                focusSelect = _this$props2.focusSelect,
+	                others = _objectWithoutProperties(_this$props2, ['componentClass', 'type', 'className', 'size', 'clsPrefix', 'value', 'onChange', 'onSearch', 'onBlur', 'showClose', 'focusSelect']);
+	            // input[type="file"] 不应该有类名 .form-control.
+	
+	
+	            var classes = {};
+	            if (size) {
+	                classes['' + size] = true;
+	            }
+	
+	            var classNames = void 0;
+	            if (type !== 'file') {
+	                classNames = (0, _classnames2["default"])(clsPrefix, classes);
+	            }
+	
+	            return showClose ? _react2["default"].createElement(
+	                'div',
+	                { className: (0, _classnames2["default"])(clsPrefix + '-close', clsPrefix + '-affix-wrapper', className) },
+	                _react2["default"].createElement(Component, _extends({}, others, {
+	                    type: type,
+	                    ref: function ref(el) {
+	                        return _this.input = el;
+	                    },
+	                    value: value,
+	                    onChange: _this.handleChange,
+	                    onBlur: _this.handleBlur,
+	                    onFocus: _this.handleFocus,
+	                    className: (0, _classnames2["default"])(className, classNames)
+	                })),
+	                _react2["default"].createElement(
+	                    'div',
+	                    { className: clsPrefix + '-suffix' },
+	                    _this.state.showClose ? _react2["default"].createElement(_beeIcon2["default"], { onClick: _this.clearValue, type: 'uf-close-c' }) : ''
+	                )
+	            ) : _react2["default"].createElement(Component, _extends({}, others, {
+	                type: type,
+	                ref: function ref(el) {
+	                    return _this.input = el;
+	                },
+	                value: value,
+	                onChange: _this.handleChange,
+	                onBlur: _this.handleBlur,
+	                onFocus: _this.handleFocus,
+	                className: (0, _classnames2["default"])(className, classNames)
+	            }));
+	        };
+	
+	        _this.renderSearch = function () {
+	            var _this$props3 = _this.props,
+	                Component = _this$props3.componentClass,
+	                type = _this$props3.type,
+	                className = _this$props3.className,
+	                size = _this$props3.size,
+	                clsPrefix = _this$props3.clsPrefix,
+	                value = _this$props3.value,
+	                onChange = _this$props3.onChange,
+	                onSearch = _this$props3.onSearch,
+	                onBlur = _this$props3.onBlur,
+	                others = _objectWithoutProperties(_this$props3, ['componentClass', 'type', 'className', 'size', 'clsPrefix', 'value', 'onChange', 'onSearch', 'onBlur']);
+	            // input[type="file"] 不应该有类名 .form-control.
+	
+	
+	            var classes = {};
+	            if (size) {
+	                classes['' + size] = true;
+	            }
+	            classes[clsPrefix + '-search'] = true;
+	
+	            if (type === "search") {
+	                return _react2["default"].createElement(
+	                    'div',
+	                    { className: (0, _classnames2["default"])(clsPrefix + '-search', clsPrefix + '-affix-wrapper', className) },
+	                    _react2["default"].createElement(Component, _extends({}, others, {
+	                        type: type,
+	                        ref: function ref(el) {
+	                            return _this.input = el;
+	                        },
+	                        onChange: _this.handleSearchChange,
+	                        value: value,
+	                        onKeyDown: _this.handleKeyDown,
+	                        onBlur: _this.handleBlur,
+	                        onFocus: _this.handleFocus,
+	                        className: (0, _classnames2["default"])(className, clsPrefix, classes)
+	                    })),
+	                    _react2["default"].createElement(
+	                        'div',
+	                        { className: clsPrefix + '-suffix' },
+	                        _react2["default"].createElement(_beeIcon2["default"], { type: 'uf-search', onClick: _this.handleSearch })
+	                    )
+	                );
+	            }
+	        };
+	
+	        _this.state = {
+	            showSearch: !props.value,
+	            value: props.value == null ? "" : props.value,
+	            showClose: false
+	        };
+	        _this.input = {};
+	        return _this;
+	    }
+	
+	    FormControl.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProp) {
+	        if (nextProp.value !== this.state.value) {
+	            this.setState({ value: nextProp.value });
+	        }
+	    };
+	
+	    FormControl.prototype.render = function render() {
+	
+	        if (this.props.type === "search") {
+	            return this.renderSearch();
+	        }
+	
+	        return this.renderInput();
+	    };
+	
+	    return FormControl;
+	}(_react2["default"].Component);
+	
+	FormControl.propTypes = propTypes;
+	FormControl.defaultProps = defaultProps;
+	
+	exports["default"] = FormControl;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _Icon = __webpack_require__(90);
+	
+	var _Icon2 = _interopRequireDefault(_Icon);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	exports["default"] = _Icon2["default"];
+	module.exports = exports['default'];
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _classnames = __webpack_require__(3);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _propTypes = __webpack_require__(5);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	
+	var propTypes = {
+		type: _propTypes2["default"].string
+	
+	};
+	/**
+	 *  badge 默认显示内容1
+	 */
+	var defaultProps = {
+		clsPrefix: 'uf'
+	};
+	
+	var Icon = function (_Component) {
+		_inherits(Icon, _Component);
+	
+		function Icon(props) {
+			_classCallCheck(this, Icon);
+	
+			return _possibleConstructorReturn(this, _Component.call(this, props));
+		}
+	
+		Icon.prototype.render = function render() {
+			var _props = this.props,
+			    type = _props.type,
+			    className = _props.className,
+			    clsPrefix = _props.clsPrefix,
+			    others = _objectWithoutProperties(_props, ['type', 'className', 'clsPrefix']);
+	
+			var clsObj = {};
+	
+			var classNames = (0, _classnames2["default"])(clsPrefix, type);
+	
+			return _react2["default"].createElement('i', _extends({}, others, { className: (0, _classnames2["default"])(classNames, className) }));
+		};
+	
+		return Icon;
+	}(_react.Component);
+	
+	Icon.defaultProps = defaultProps;
+	Icon.propTypes = propTypes;
+	
+	exports["default"] = Icon;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	module.exports = __webpack_require__(92);
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _classnames = __webpack_require__(3);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _beeInputGroupAddon = __webpack_require__(93);
+	
+	var _beeInputGroupAddon2 = _interopRequireDefault(_beeInputGroupAddon);
+	
+	var _InputGroupButton = __webpack_require__(95);
+	
+	var _InputGroupButton2 = _interopRequireDefault(_InputGroupButton);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	
+	var defaultProps = {
+	  clsPrefix: 'u-input-group',
+	  simple: false
+	};
+	
+	var InputGroup = function (_React$Component) {
+	  _inherits(InputGroup, _React$Component);
+	
+	  function InputGroup() {
+	    _classCallCheck(this, InputGroup);
+	
+	    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+	  }
+	
+	  InputGroup.prototype.render = function render() {
+	    var _props = this.props,
+	        className = _props.className,
+	        clsPrefix = _props.clsPrefix,
+	        simple = _props.simple,
+	        others = _objectWithoutProperties(_props, ['className', 'clsPrefix', 'simple']);
+	
+	    return _react2["default"].createElement('span', _extends({}, others, {
+	      className: (0, _classnames2["default"])(className, clsPrefix, simple && 'simple')
+	    }));
+	  };
+	
+	  return InputGroup;
+	}(_react2["default"].Component);
+	
+	/**
+	  * 将InputGroupAddon与InputGroupButton组件作为InputGroup的附属组件
+	  */
+	
+	
+	InputGroup.Addon = _beeInputGroupAddon2["default"];
+	InputGroup.Button = _InputGroupButton2["default"];
+	InputGroup.defaultProps = defaultProps;
+	exports["default"] = InputGroup;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _InputGroupAddon = __webpack_require__(94);
+	
+	var _InputGroupAddon2 = _interopRequireDefault(_InputGroupAddon);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	exports["default"] = _InputGroupAddon2["default"];
+	module.exports = exports['default'];
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _classnames = __webpack_require__(3);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	
+	var defaultProps = {
+	  clsPrefix: 'u-input-group-addon'
+	};
+	
+	var InputGroupAddon = function (_React$Component) {
+	  _inherits(InputGroupAddon, _React$Component);
+	
+	  function InputGroupAddon() {
+	    _classCallCheck(this, InputGroupAddon);
+	
+	    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+	  }
+	
+	  InputGroupAddon.prototype.render = function render() {
+	    var _props = this.props,
+	        className = _props.className,
+	        clsPrefix = _props.clsPrefix,
+	        others = _objectWithoutProperties(_props, ['className', 'clsPrefix']);
+	
+	    return _react2["default"].createElement('span', _extends({}, others, {
+	      className: (0, _classnames2["default"])(className, clsPrefix)
+	    }));
+	  };
+	
+	  return InputGroupAddon;
+	}(_react2["default"].Component);
+	
+	InputGroupAddon.defaultProps = defaultProps;
+	exports["default"] = InputGroupAddon;
+	module.exports = exports['default'];
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _classnames = __webpack_require__(3);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	function _defaults(obj, defaults) { var keys = Object.getOwnPropertyNames(defaults); for (var i = 0; i < keys.length; i++) { var key = keys[i]; var value = Object.getOwnPropertyDescriptor(defaults, key); if (value && value.configurable && obj[key] === undefined) { Object.defineProperty(obj, key, value); } } return obj; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : _defaults(subClass, superClass); }
+	
+	var defaultProps = {
+	  clsPrefix: 'u-input-group-btn'
+	};
+	
+	var InputGroupButton = function (_React$Component) {
+	  _inherits(InputGroupButton, _React$Component);
+	
+	  function InputGroupButton() {
+	    _classCallCheck(this, InputGroupButton);
+	
+	    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+	  }
+	
+	  InputGroupButton.prototype.render = function render() {
+	    var _props = this.props,
+	        className = _props.className,
+	        clsPrefix = _props.clsPrefix,
+	        others = _objectWithoutProperties(_props, ['className', 'clsPrefix']);
+	
+	    return _react2["default"].createElement('span', _extends({}, others, {
+	      className: (0, _classnames2["default"])(className, clsPrefix)
+	    }));
+	  };
+	
+	  return InputGroupButton;
+	}(_react2["default"].Component);
+	
+	InputGroupButton.defaultProps = defaultProps;
+	exports["default"] = InputGroupButton;
 	module.exports = exports['default'];
 
 /***/ })

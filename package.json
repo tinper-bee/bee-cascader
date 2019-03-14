@@ -36,6 +36,9 @@
   "pub": "bee-tools run pub"
  },
  "dependencies": {
+  "bee-form-control": "latest",
+  "bee-icon": "latest",
+  "bee-input-group": "latest",
   "classnames": "^2.2.5",
   "tinper-bee-core": "^2.0.20"
  },

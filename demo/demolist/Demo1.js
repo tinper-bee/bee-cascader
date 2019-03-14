@@ -55,7 +55,7 @@ import Button from "bee-button";
 	}
 
 	onClickHandler=(data)=>{
-		console.log("data: ",data);
+		// console.log("data: ",data);
 	}
 
 	click=()=>{
@@ -102,7 +102,7 @@ import Button from "bee-button";
  		return(
             <Row>
                 <Col md={4}>
-									<Button colors="primary" onClick={this.click} style={{marginBottom:8+'px'}}>清空</Button>
+									<Button colors="primary" onClick={this.click} style={{marginBottom:8+'px'}}>切换数据源</Button>
                     <div className="height-150">
                      	<Cascader options = {this.state.options} onClick={this.onClickHandler}/>
                     </div>
