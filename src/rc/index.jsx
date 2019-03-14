@@ -1,12 +1,19 @@
+/**
+ * This source code is quoted from rc-cascader.
+ * homepage: https://github.com/react-component/cascader
+ */
 import React, { Component, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import Trigger from 'rc-trigger';
 import warning from 'warning';
-import KeyCode from 'rc-util/lib/KeyCode';
+import KeyCode from 'tinper-bee-core';
 import arrayTreeFilter from 'array-tree-filter';
 import shallowEqualArrays from 'shallow-equal/arrays';
 import { polyfill } from 'react-lifecycles-compat';
 import Menus from './Menus';
+import Icon from 'bee-icon';
+import FormControl from 'bee-form-control';
+import InputGroup from 'bee-input-group';
 
 const BUILT_IN_PLACEMENTS = {
   bottomLeft: {
@@ -43,14 +50,19 @@ const BUILT_IN_PLACEMENTS = {
   },
 };
 
-class Cascader extends Component {
+class Rcascader extends Component {
   constructor(props) {
     super(props);
     let initialValue = [];
+    let initInputValue = "";
+    let initOptions = [];
     if ('value' in props) {
       initialValue = props.value || [];
     } else if ('defaultValue' in props) {
-      initialValue = props.defaultValue || [];
+      initialValue = props.defaultValue.map(o => o.value) || [];
+      initInputValue = props.defaultValue.map(o => o.label).join('/ ') || ''
+    } else if ('options' in props) {
+      initOptions = props.options || []
     }
 
     warning(
@@ -63,8 +75,12 @@ class Cascader extends Component {
       activeValue: initialValue,
       value: initialValue,
       prevProps: props,
+      showClose:false, //是否显示清空按钮
+      inputValue: initInputValue,   //输入框显示的值
+      option : initOptions   //下拉面板中的数据源
     };
     this.defaultFieldNames = { label: 'label', value: 'value', children: 'children' };
+    this.uniqueID = this.uniqueID.bind(this);
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -85,8 +101,19 @@ class Cascader extends Component {
     if ('popupVisible' in nextProps) {
       newState.popupVisible = nextProps.popupVisible;
     }
+    if ('options' in nextProps) {
+			newState.options = nextProps.options || [];
+    }
 
     return newState;
+  }
+
+  uniqueID() {
+    function s4(){
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+            s4() + '-' + s4() + s4() + s4();
   }
 
   getPopupDOMNode() {
@@ -142,6 +169,9 @@ class Cascader extends Component {
   handleChange = (options, setProps, e) => {
     if (e.type !== 'keydown' || e.keyCode === KeyCode.ENTER) {
       this.props.onChange(options.map(o => o[this.getFieldName('value')]), options);
+      this.setState({
+        inputValue: options.map(o => o[this.getFieldName('label')]).join('/ ')
+      })
       this.setPopupVisible(setProps.visible);
     }
   };
@@ -288,21 +318,45 @@ class Cascader extends Component {
     this.trigger = node;
   };
 
+  onMouseLeave=(e)=>{
+		this.setState({
+		  showClose:false
+		})
+	}
+
+	onMouseEnter=(e)=>{
+		this.setState({
+			showClose:true
+		})
+  }
+  
+  resetValue(e){
+    e.stopPropagation();
+		e.preventDefault();
+    this.setState({
+      inputValue: '',
+      activeValue: []
+    })
+  }
+
   render() {
+    const { showClose, popupVisible, inputValue, options, activeValue } = this.state;
     const {
       prefixCls,
       transitionName,
       popupClassName,
-      options = [],
+      size,
       disabled,
       builtinPlacements,
       popupPlacement,
       children,
+      placeholder,
       ...restProps
     } = this.props;
     // Did not show popup when there is no options
     let menus = <div />;
     let emptyMenuClassName = '';
+    let iconClass = !popupVisible ? "uf-treearrow-down": "uf-gridcaretarrowup";
     if (options && options.length > 0) {
       menus = (
         <Menus
@@ -334,30 +388,53 @@ class Cascader extends Component {
         popupClassName={popupClassName + emptyMenuClassName}
         popup={menus}
       >
-        {cloneElement(children, {
-          onKeyDown: this.handleKeyDown,
-          tabIndex: disabled ? undefined : 0,
-        })}
+        <InputGroup simple className={`${prefixCls}-input-group`}
+          onMouseEnter={this.onMouseEnter}
+          onMouseLeave={this.onMouseLeave}
+        >
+          <FormControl
+            disabled = {disabled? true : false}
+            placeholder = {placeholder}
+            value={inputValue}
+            size={size}
+            type="text"
+            readOnly
+          />
+          {
+            inputValue && showClose?(
+            <InputGroup.Button shape="border" 
+              onClick={(e) => this.resetValue(e)}>
+              <i className="uf uf-close-c"></i>
+            </InputGroup.Button>
+            ):<InputGroup.Button shape="border" 
+              onClick={(e)=>{props.keyboardInput?this.iconClick(e):''}}>
+              <i className={`uf ${iconClass}`}></i>
+            </InputGroup.Button>
+          }
+        </InputGroup>
       </Trigger>
     );
   }
 }
 
-Cascader.defaultProps = {
+Rcascader.defaultProps = {
   onChange() {},
   onPopupVisibleChange() {},
+  size:'md',
   disabled: false,
   transitionName: '',
   prefixCls: 'rc-cascader',
+  defaultValue:[],
   popupClassName: '',
   popupPlacement: 'bottomLeft',
   builtinPlacements: BUILT_IN_PLACEMENTS,
   expandTrigger: 'click',
   fieldNames: { label: 'label', value: 'value', children: 'children' },
-  expandIcon: '>',
+  expandIcon: <Icon type="uf-arrow-right"></Icon>,
 };
 
-Cascader.propTypes = {
+Rcascader.propTypes = {
+  size: PropTypes.string,
   value: PropTypes.array,
   defaultValue: PropTypes.array,
   options: PropTypes.array.isRequired,
@@ -382,6 +459,6 @@ Cascader.propTypes = {
   loadingIcon: PropTypes.node,
 };
 
-polyfill(Cascader);
+polyfill(Rcascader);
 
-export default Cascader;
+export default Rcascader;

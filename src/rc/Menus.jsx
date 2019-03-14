@@ -1,3 +1,7 @@
+/**
+ * This source code is quoted from rc-cascader.
+ * homepage: https://github.com/react-component/cascader
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 import arrayTreeFilter from 'array-tree-filter';
