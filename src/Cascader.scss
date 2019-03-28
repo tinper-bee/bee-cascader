@@ -14,6 +14,7 @@
 		box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 		white-space: nowrap;
 		z-index: 10;
+		vertical-align: top;
 		&-hidden {
 			display: none;
 		}
@@ -79,6 +80,7 @@
 		padding: 0;
 		border-right: 1px solid #e9e9e9;
 		overflow: auto;
+		vertical-align: top;
 		&:last-child {
 			border-right: 0;
 		}
