@@ -131,9 +131,24 @@
 		.u-form-control{
 			font-size: 12px;
 			color: #212121;
-			&:hover{
+			&:not(.u-form-control[disabled]):hover{
 				border-color: #66afe9;
 			}
+			&::-webkit-input-placeholder {
+				font-size: 12px;
+			}
+			&:-moz-placeholder {
+				font-size: 12px;
+			}
+			&::-moz-placeholder{
+				font-size: 12px;
+			}
+			&:-ms-input-placeholder{
+				font-size: 12px;
+			}
+		}
+		.u-form-control[disabled] + .u-input-group-btn > .uf{
+			color: #c1c7d0;
 		}
 		.u-input-group-btn{
 			.uf{
