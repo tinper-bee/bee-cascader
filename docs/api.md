@@ -37,6 +37,7 @@ import 'bee-cascader/build/Cascader.css';
 |onChange   |选择完成后的回调| Function(value, selectedOptions)|	-|
 |onClick	|选中节点的钩子函数，返回array选中的节点| function |	-|
 |inputValue	|自定义输入框展示内容| string |	-|
+|separator	|分隔符自定义| string |'/ '|
 
 ## 注意事项
 
